@@ -50,12 +50,23 @@ The game uses a flat script with sections separated by banner comments (`// ─�
 
 ## Git Workflow
 
-After every code change: `git add <file>`, commit with a descriptive message, and `git push`.
+**Commit and push after every meaningful change.** Do not batch multiple unrelated changes into one commit. The goal is that GitHub always reflects the current working state so work is never lost and any version can be restored.
+
+Always add specific files rather than `git add .`:
 
 ```bash
 git add shooter.html
 git commit -m "feat: short description of what changed"
 git push
 ```
+
+**Commit message conventions:**
+- `feat:` — new feature or behaviour
+- `fix:` — bug fix
+- `refactor:` — restructuring without behaviour change
+- `docs:` — documentation only
+- `chore:` — config, tooling, or repo maintenance
+
+Commit at natural checkpoints: after adding a feature, after fixing a bug, after any change that leaves the game in a working state. Never leave a session without pushing.
 
 Remote: https://github.com/diethrv/starfall-shooter
